@@ -200,12 +200,12 @@ if __name__ == '__main__':
 	udp = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 	try:
-		udp.bind((ip,53))
+		udp.bind((ip,953))
 	except:
-		print "%s[Error]%s Cannot bind to address %s:53" % (c["r"], c["e"], ip)
+		print "%s[Error]%s Cannot bind to address %s:953" % (c["r"], c["e"], ip)
 		exit(1)
 
-	print "%s[+]%s DNS listening on '%s:53'" % (c["g"], c["e"], ip)
+	print "%s[+]%s DNS listening on '%s:953'" % (c["g"], c["e"], ip)
 	p_cmds(s,b,ip,z)
 	print "%s[+]%s Once files have sent, use Ctrl+C to exit and save.\n" % (c["g"], c["e"])
   
@@ -240,7 +240,7 @@ if __name__ == '__main__':
 
 			print "%s[>]%s len: '%d bytes'\t- %s" % (c["y"], c["e"], len(p.data_text), fname)
 			if v:
-				print '%s[>>]%s %s -> %s:53' % (c["b"], c["e"], p.data_text, ip)
+				print '%s[>>]%s %s -> %s:953' % (c["b"], c["e"], p.data_text, ip)
 
 			for d in tmp_data:
 				r_data[fname].append(d)
